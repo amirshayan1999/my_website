@@ -1,9 +1,14 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Typography from "@material-ui/core/Typography";
 import { Grid } from "@material-ui/core";
 
 import useStyles from "./styles/Sernice.styles";
-function Service({ icon, title, desc }) {
+interface ServiceProps {
+  icon: ReactNode;
+  title: string;
+  desc: string;
+}
+const Service: React.FC<ServiceProps> = ({ icon, title, desc }) => {
   const classes = useStyles();
   return (
     <Grid container lg={4} md={6} xs={12} className={classes.root}>
@@ -18,6 +23,6 @@ function Service({ icon, title, desc }) {
       </Grid>
     </Grid>
   );
-}
+};
 
 export default Service;

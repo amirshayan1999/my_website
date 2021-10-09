@@ -1,33 +1,11 @@
-import { makeStyles } from "@material-ui/core/styles";
-import theme from "../themes/theme";
-import { getTranslate } from "../localization";
-import Title from "../components/Title/Title";
+import { getTranslate } from "../../localization";
+import Title from "../../components/Title/Title";
 import { Grid, Typography } from "@material-ui/core";
-import Skill from "../components/Skill/Skill";
-import Experience from "../components/Experience/Experience";
+import Skill from "../../components/Skill/Skill";
+import Experience from "../../components/Experience/Experience";
 import WorkIcon from "@material-ui/icons/Work";
 import SchoolIcon from "@material-ui/icons/School";
-
-const useStyles = makeStyles({
-  root: {
-    width: "100%",
-    height: "100vh",
-  },
-  experienceContainer: {
-    paddingLeft: 40,
-    paddingBottom: 60,
-    [theme.breakpoints.down("sm")]: {
-      paddingLeft: 15,
-    },
-  },
-  icon: {
-    fontSize: "2.4rem",
-  },
-  experienceTitle: {
-    marginLeft: 15,
-  },
-});
-
+import useStyles from "./styles/Resume.styles";
 function ResumeScreen() {
   const classes = useStyles();
   const translate = getTranslate();

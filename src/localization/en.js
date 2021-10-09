@@ -72,7 +72,7 @@ const info = {
   email: "Email",
   address: "Address",
   send: "Send Massage",
-  emailAddress: "nastaranjalalibusiness@gmail.com",
+  emailAddress: "arsham.ramezani@gmail.com",
   addressDesc: "Iran, Tehran",
 };
 export default info;

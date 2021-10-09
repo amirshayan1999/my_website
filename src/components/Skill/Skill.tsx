@@ -2,8 +2,11 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { LinearProgress } from "@material-ui/core";
 import useStyles from "./styles/Skills.styles";
-
-function Skill(props) {
+interface SkillProps {
+  val: number;
+  title: string;
+}
+const Skill: React.FC<SkillProps> = ({ val, title }) => {
   const classes = useStyles();
   const [progress, setProgress] = React.useState(0);
 
@@ -12,17 +15,17 @@ function Skill(props) {
       setProgress((oldProgress) => {
         let diff = 1;
         diff = diff + 2;
-        return Math.min(oldProgress + diff, props.val);
+        return Math.min(oldProgress + diff, val);
       });
     }, 20);
     return () => {
       clearInterval(timer);
     };
-  }, [props.val]);
+  }, [val]);
 
   return (
     <div className={classes.root}>
-      <Typography variant={"h6"}>{props.title}</Typography>
+      <Typography variant={"h6"}>{title}</Typography>
       <div className={classes.progressiveContainer}>
         <Typography variant={"body1"}>{progress + "%"}</Typography>
         <LinearProgress
@@ -33,6 +36,6 @@ function Skill(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Skill;

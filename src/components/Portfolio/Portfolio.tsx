@@ -1,8 +1,13 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { Grid } from "@material-ui/core";
-import useStyles from "./styles/portfolio.styles";
-function Portfolio({ imgSrc, title, language }) {
+import useStyles from "./styles/Portfolio.styles";
+interface PortfolioProps {
+  imgSrc: string;
+  title: string;
+  language: string;
+}
+const Portfolio: React.FC<PortfolioProps> = ({ imgSrc, title, language }) => {
   const classes = useStyles();
 
   return (
@@ -20,6 +25,6 @@ function Portfolio({ imgSrc, title, language }) {
       </Grid>
     </Grid>
   );
-}
+};
 
 export default Portfolio;

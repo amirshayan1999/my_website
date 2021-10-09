@@ -6,8 +6,8 @@ import Service from "../../components/Service/Service";
 import PaletteIcon from "@material-ui/icons/Palette";
 import PhoneIphoneIcon from "@material-ui/icons/PhoneIphone";
 import CodeIcon from "@material-ui/icons/Code";
-import useStyles from "./styles/AboutScreen.styles";
-function AboutScreen() {
+import useStyles from "./styles/About.styles";
+function About() {
   const classes = useStyles();
   const translate = getTranslate();
   const onDownload = () => {
@@ -67,7 +67,7 @@ function AboutScreen() {
           >
             <Button
               onClick={onDownload}
-              variant="button"
+              variant="outlined"
               className={classes.cvButton}
             >
               {translate.downloadcv}
@@ -97,4 +97,4 @@ function AboutScreen() {
   );
 }
 
-export default AboutScreen;
+export default About;

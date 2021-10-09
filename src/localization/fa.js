@@ -71,7 +71,7 @@ const info = {
   email: "ایمیل",
   address: "آدرس",
   send: "ارسال پیام",
-  emailAddress: "nastaranjalalibusiness@gmail.com",
+  emailAddress: "arsham.ramezani@gmail.com",
   addressDesc: "ایران, تهران",
 };
 export default info;

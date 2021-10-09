@@ -14,7 +14,7 @@ function Home() {
   return (
     <div className={classes.root}>
       <div className="bg" />
-      <Typography variant="h1" classNbgame={classes.title}>
+      <Typography variant="h1" className={classes.title}>
         {translate.hi1}
         <span className={classes.name}>{translate.name}</span>
         {translate.hi2}

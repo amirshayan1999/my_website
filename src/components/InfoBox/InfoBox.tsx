@@ -1,8 +1,13 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Typography from "@material-ui/core/Typography";
 import { Grid } from "@material-ui/core";
 import useStyles from "./styles/InfoBox.styles";
-function InfoBox({ icon, title, desc }) {
+interface InfoBoxProps {
+  icon: ReactNode;
+  title: string;
+  desc: string[];
+}
+const InfoBox: React.FC<InfoBoxProps> = ({ icon, title, desc }) => {
   const classes = useStyles();
   return (
     <Grid container className={classes.root}>
@@ -18,6 +23,6 @@ function InfoBox({ icon, title, desc }) {
       </Grid>
     </Grid>
   );
-}
+};
 
 export default InfoBox;

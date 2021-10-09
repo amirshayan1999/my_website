@@ -15,13 +15,13 @@ function Contact() {
   return (
     <Grid className={classes.root}>
       <Title text={translate.contact} />
-      <Grid container direction="row" className={classes.sectionContainer}>
+      <Grid container direction="row">
         <Grid xs={12} lg={6} className={classes.formContainer}>
           <Typography variant="h4" className={classes.title}>
             {translate.getInTouch}
           </Typography>
           <TextField
-            color="#37374e"
+            color="primary"
             className={classes.input}
             required
             label={translate.enterYourName}
@@ -56,14 +56,14 @@ function Contact() {
             variant="outlined"
             placeholder=" "
           />
-          <Button variant="button" className={classes.sendBtn}>
+          <Button variant="outlined" className={classes.sendBtn}>
             {translate.send}
           </Button>
         </Grid>
         <Grid xs={12} lg={6} className={classes.infoContainer}>
           <InfoBox
             title={translate.phone}
-            desc={["(+98)9034066980", "(+98)9182576354"]}
+            desc={["(+98)9115647432", "(+98)9116074349"]}
             icon={<PhoneIcon className={classes.icon} />}
           />
           <InfoBox

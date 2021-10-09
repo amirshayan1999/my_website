@@ -2,7 +2,19 @@ import Typography from "@material-ui/core/Typography";
 import { Grid } from "@material-ui/core";
 import RadioButtonUncheckedIcon from "@material-ui/icons/RadioButtonUnchecked";
 import useStyles from "./styles/Experience.styles";
-function Experience({ year, jobTitle, company, desc }) {
+import React from "react";
+interface ExperienceProps {
+  year: number;
+  jobTitle: string;
+  company: string;
+  desc: string;
+}
+const Experience: React.FC<ExperienceProps> = ({
+  year,
+  jobTitle,
+  company,
+  desc,
+}) => {
   const classes = useStyles();
   return (
     <Grid className={classes.root}>
@@ -23,5 +35,5 @@ function Experience({ year, jobTitle, company, desc }) {
       </Grid>
     </Grid>
   );
-}
+};
 export default Experience;

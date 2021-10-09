@@ -3,41 +3,40 @@ import fa_ir from "./fa";
 
 const lang = localStorage.getItem("lang") ? localStorage.getItem("lang") : "en";
 
-export {lang}
+export { lang };
 
 const direction = {
-    fa: "rtl",
-    en: "ltr"
-}
+  fa: "rtl",
+  en: "ltr",
+};
 const getDirection = () => {
-    return direction[lang]
-}
-export {getDirection}
+  return direction[lang];
+};
+export { getDirection };
 
 const fonts = {
-    fa: "IRANSans",
-    en: 'Ubuntu'
-}
+  fa: "IRANSans",
+  en: "Ubuntu",
+};
 
 const getFonts = () => {
-    return fonts[lang]
-}
+  return fonts[lang];
+};
 
-export {getFonts}
+export { getFonts };
 
 const translate = {
-    fa: fa_ir,
-    en: en_us
-}
+  fa: fa_ir,
+  en: en_us,
+};
 const getTranslate = () => {
-    return translate[lang]
-}
-export {getTranslate}
+  return translate[lang];
+};
+export { getTranslate };
 
 const changeLang = (lang) => {
-    if (localStorage.getItem("lang") !== lang)
-        localStorage.setItem("lang", lang)
-    else return
-    window.location.reload()
-}
-export {changeLang}
+  if (localStorage.getItem("lang") !== lang) localStorage.setItem("lang", lang);
+  else return;
+  window.location.reload();
+};
+export { changeLang };

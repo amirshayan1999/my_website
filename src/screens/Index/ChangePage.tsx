@@ -1,15 +1,15 @@
-import AboutScreen from "../About/AboutScreen";
-import Contact from "../Contact/contactScreen";
-import Home from "../Home/homeScreen";
-import Portfolios from "../Portfolios/portfoliosScreen";
-import Resume from "../resumeScreen";
+import About from "../About/About";
+import Contact from "../Contact/Contact";
+import Home from "../Home/Home";
+import Portfolios from "../Portfolios/Portfolios";
+import Resume from "../Resume/Resume";
 
 const ChangePage = (page: number) => {
   switch (page) {
     case 0:
       return <Home />;
     case 1:
-      return <AboutScreen />;
+      return <About />;
     case 2:
       return <Resume />;
     case 3:

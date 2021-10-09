@@ -2,7 +2,7 @@ import React from "react";
 import { getTranslate } from "../../localization";
 import Title from "../../components/Title/Title";
 import { Grid } from "@material-ui/core";
-import Portfolio from "../../components/Portfolio/portfolio";
+import Portfolio from "../../components/Portfolio/Portfolio";
 import photo from "../../assets/images/portfolio.png";
 import useStyles from "./styles/Portfolios.styles";
 function Portfolios() {
