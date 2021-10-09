@@ -1,5 +1,5 @@
 const info = {
-  name: "Nastaran Jalali",
+  name: "Arsham Ramzani",
   home: "HOME",
   about: "ABOUT",
   resume: "RESUME",
