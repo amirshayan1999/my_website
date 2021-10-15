@@ -77,5 +77,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "3.5rem",
     color: "rgb(229,39,100)",
   },
+  marginBottom: { marginBottom: 15 },
+  buttonContainer: { display: "flex", marginTop: 25 },
 }));
 export default useStyles;

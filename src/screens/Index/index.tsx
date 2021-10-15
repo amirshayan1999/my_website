@@ -17,12 +17,12 @@ import useStyles from "./styles/index.styles";
 import ChangePage from "./ChangePage";
 const translate = getTranslate();
 
-function ResponsiveDrawer(props) {
+function ResponsiveDrawer(props: any) {
   const { window } = props;
   const classes = useStyles();
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [page, setPage] = useState(0);
-  const [changed, setChanged] = useState(true);
+  const [mobileOpen, setMobileOpen] = useState<boolean>(false);
+  const [page, setPage] = useState<number>(0);
+  const [changed, setChanged] = useState<boolean>(true);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -30,12 +30,12 @@ function ResponsiveDrawer(props) {
   const setMobileOpenFalse = () => {
     setMobileOpen(false);
   };
-  const setNewPage = (num) => {
+  const setNewPage = (num: number) => {
     setPage(num);
   };
   useEffect(() => {
     setChanged((prev) => !prev);
-    setTimeout(function () {
+    setTimeout(() => {
       setChanged((prev) => !prev);
     }, 300);
   }, [page]);
@@ -91,6 +91,7 @@ function ResponsiveDrawer(props) {
       </div>
       <div className={classes.bottomDrawer}>
         <Button
+          name="ChangeLanguageToEnglish"
           className={[
             classes.button,
             lang === "en" ? classes.inActiveButton : classes.activeButton,
@@ -101,6 +102,7 @@ function ResponsiveDrawer(props) {
           English
         </Button>
         <Button
+          name="ChangeLanguageToPersian"
           className={[
             classes.button,
             lang === "fa" ? classes.inActiveButton : classes.activeButton,

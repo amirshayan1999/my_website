@@ -8,7 +8,7 @@ import { getTranslate } from "../../localization";
 
 import useStyles from "./styles/Home.styles";
 
-function Home() {
+const Home = () => {
   const classes = useStyles();
   const translate = getTranslate();
   return (
@@ -51,6 +51,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

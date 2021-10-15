@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Typography from "@material-ui/core/Typography";
 import { LinearProgress } from "@material-ui/core";
 import useStyles from "./styles/Skills.styles";
@@ -10,7 +10,7 @@ const Skill: React.FC<SkillProps> = ({ val, title }) => {
   const classes = useStyles();
   const [progress, setProgress] = React.useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const timer = setInterval(() => {
       setProgress((oldProgress) => {
         let diff = 1;
@@ -25,9 +25,9 @@ const Skill: React.FC<SkillProps> = ({ val, title }) => {
 
   return (
     <div className={classes.root}>
-      <Typography variant={"h6"}>{title}</Typography>
+      <Typography variant="h6">{title}</Typography>
       <div className={classes.progressiveContainer}>
-        <Typography variant={"body1"}>{progress + "%"}</Typography>
+        <Typography variant="body1">{`${progress}%`}</Typography>
         <LinearProgress
           className={classes.progressive}
           variant="determinate"

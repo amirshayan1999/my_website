@@ -17,26 +17,25 @@ function About() {
     link.click();
   };
   return (
-    <Grid className={classes.root}>
+    <Grid container className={classes.root}>
       <Title text={translate.aboutMe} />
       <Grid container direction="row">
-        <Grid xs={12} lg={6} className={classes.picContainer}>
+        <Grid item={true} xs={12} lg={6} className={classes.picContainer}>
           <img
             src={aboutMePic}
             alt="aboutMePicture"
             className={classes.aboutMePic}
           />
         </Grid>
-        <Grid xs={12} lg={6} className={classes.textContainer}>
-          <Typography variant="h3" style={{ marginBottom: 15 }}>
+        <Grid item={true} xs={12} lg={6} className={classes.textContainer}>
+          <Typography variant="h3" className={classes.marginBottom}>
             {translate.hi1}
             <span className={classes.name}>{translate.name}</span>
             {translate.hi2}
           </Typography>
           <Typography
             variant="body1"
-            className={classes.info}
-            style={{ marginBottom: 15 }}
+            className={`${classes.info} ${classes.marginBottom}`}
           >
             {translate.homeDesc}
           </Typography>
@@ -59,13 +58,9 @@ function About() {
           <Typography variant="body1" className={classes.info}>
             <b className={classes.bold}>{translate.phone}</b>: (+98)9115647432
           </Typography>
-          <div
-            style={{
-              display: "flex",
-              marginTop: 25,
-            }}
-          >
+          <div className={classes.buttonContainer}>
             <Button
+              name="Download"
               onClick={onDownload}
               variant="outlined"
               className={classes.cvButton}

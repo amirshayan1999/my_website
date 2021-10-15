@@ -25,7 +25,7 @@ function Contact() {
             className={classes.input}
             required
             label={translate.enterYourName}
-            defaultValue=" "
+            defaultValue=""
             variant="outlined"
             placeholder=" "
           />
@@ -34,7 +34,7 @@ function Contact() {
             className={classes.input}
             required
             label={translate.enterYourEmail}
-            defaultValue=" "
+            defaultValue=""
             variant="outlined"
             placeholder=" "
           />
@@ -43,7 +43,7 @@ function Contact() {
             className={classes.input}
             required
             label={translate.enterYourSubject}
-            defaultValue=" "
+            defaultValue=""
             variant="outlined"
             placeholder=" "
           />
@@ -52,11 +52,11 @@ function Contact() {
             label={translate.enterYourMessage}
             multiline
             rows={5}
-            defaultValue=" "
+            defaultValue=""
             variant="outlined"
             placeholder=" "
           />
-          <Button variant="outlined" className={classes.sendBtn}>
+          <Button variant="outlined" className={classes.sendBtn} name="Send">
             {translate.send}
           </Button>
         </Grid>

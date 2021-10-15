@@ -12,7 +12,7 @@ import rtl from "jss-rtl";
 import { getDirection } from "./localization/index";
 const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 
-function App() {
+const App = () => {
   return getDirection() === "ltr" ? (
     <ThemeProvider theme={theme}>
       <StylesProvider>
@@ -28,6 +28,6 @@ function App() {
       </StylesProvider>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

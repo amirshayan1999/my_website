@@ -8,7 +8,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ text }) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Typography variant={"h2"} className={classes.title}>
+      <Typography variant="h2" className={classes.title}>
         {text}
       </Typography>
     </div>

@@ -5,7 +5,7 @@ import { Grid } from "@material-ui/core";
 import Portfolio from "../../components/Portfolio/Portfolio";
 import photo from "../../assets/images/portfolio.png";
 import useStyles from "./styles/Portfolios.styles";
-function Portfolios() {
+const Portfolios = () => {
   const classes = useStyles();
   const translate = getTranslate();
   return (
@@ -59,6 +59,6 @@ function Portfolios() {
       </Grid>
     </Grid>
   );
-}
+};
 
 export default Portfolios;
