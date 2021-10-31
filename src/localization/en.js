@@ -30,7 +30,7 @@ const info = {
   developDesc:
     "I like Nodejs and enjoing coding with that and building a web site with it , it's fun ;)",
   mobileAppDesc:
-    "I developed an aplication with React Native (Really i love it , it veryyyyy fun and i get more hope when i work with it) for an univiversity appliction",
+    "I developed an aplication with React Native (Really i love it , it veryyyyy fun and i get more hope when i work with it) for an university appliction",
   mySkills: "My Skills",
   html5: "HTML5",
   css3: "CSS3",

@@ -17,13 +17,13 @@ const ResumeScreen = () => {
           <Skill title={translate.html5} val={76} />
           <Skill title={translate.js} val={78} />
           <Skill title={translate.reactJS} val={83} />
-          <Skill title={translate.materialUI} val={53} />
+          <Skill title={translate.materialUI} val={68} />
         </Grid>
         <Grid xs={12} lg={6}>
           <Skill title={translate.css3} val={80} />
-          <Skill title={translate.jquery} val={19} />
+          <Skill title={translate.reactNative} val={70} />
           <Skill title={translate.bootstrap} val={39} />
-          <Skill title={translate.photoshop} val={20} />
+          <Skill title={translate.nodeJs} val={51} />
         </Grid>
       </Grid>
       <Title text={translate.resume} />
