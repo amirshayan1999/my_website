@@ -26,11 +26,11 @@ const info = {
   webDevelopment: "توسعه وب",
   mobileApplication: "اپلیکیشن موبایل",
   designDesc:
-    "Implementing user interfaces with React, React Router, and Material UI, CSS, JSS, and Bootstrap for styling. Creating responsive websites",
+    "یه سری چیزا با ری اکت می زنم با کمک دوست عزیزم متریال که کارمو خیلی راحت می کنه :)",
   developDesc:
-    "there's nothing special right now but I promise you there will be :') probably GO or something",
+    "یکم node js دوست دارم و وقتی باهاش کد می زنم لذت می برم , مخصوصا وقتی که باهاش سایت می زنم:)",
   mobileAppDesc:
-    "there's nothing special right now but I promise you there will be :') I mean it has to be 3 services I'm not very interested in mobile apps though",
+    "با react native اپلیکیشن می سازم راستش خیلی خیلی دوسش دارم و وقتی کد می زنم یه حس خیلی بهتری دارم و کلی روحیه می گیرم برای اینده",
   mySkills: "مهارت\u200cها",
   html5: "HTML5",
   css3: "CSS3",
