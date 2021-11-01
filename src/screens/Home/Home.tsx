@@ -24,7 +24,7 @@ const Home = () => {
       </Typography>
       <div className={classes.btnContainer}>
         <a
-          href="https://www.linkedin.com/in/nastaran-jalali-559722200/"
+          href="https://www.linkedin.com/in/arsham-ramzani-0905a8194/"
           target="_blank"
           rel="noreferrer"
         >
@@ -33,17 +33,13 @@ const Home = () => {
           </IconButton>
         </a>
 
-        <a
-          href="https://github.com/nastaranjalali"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://github.com/arsham79" target="_blank" rel="noreferrer">
           <IconButton className={classes.iconBTN}>
             <GitHubIcon className={classes.Icon} />
           </IconButton>
         </a>
 
-        <a href="https://t.me/Notnastarann" target="_blank" rel="noreferrer">
+        <a href="https://t.me/arsham_79" target="_blank" rel="noreferrer">
           <IconButton className={classes.iconBTN}>
             <TelegramIcon className={classes.Icon} />
           </IconButton>
