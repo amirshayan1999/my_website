@@ -9,6 +9,26 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
   },
+  "@keyframes slide": {
+    "0%": {
+      transform: "translateX(-45%)",
+    },
+    "100%": {
+      transform: "translateX(25%)",
+    },
+  },
+  homeBackround: {
+    animation: "$slide 5s ease-in-out infinite alternate",
+    backgroundImage:
+      "linear-gradient(-20deg, rgba(27, 27, 47, 0.5) 50%, #0f0f24 50%)",
+    bottom: 0,
+    left: "-100%",
+    opacity: 0.5,
+    position: "fixed",
+    right: "-50%",
+    top: 0,
+    zIndex: -1,
+  },
   title: {
     marginBottom: "15px",
   },

@@ -2,8 +2,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import { getDirection } from "../../../localization";
 const useStyles = makeStyles((theme) => ({
   root: {
+    display: "flex",
     width: "100%",
     height: "100vh",
+    flexDirection: "column",
   },
   picContainer: {
     position: "relative",
@@ -69,9 +71,12 @@ const useStyles = makeStyles((theme) => ({
   },
   servicesContainer: {
     width: "100%",
-    display: "flex",
-    flexDirection: "row",
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr 1fr",
     paddingBottom: 40,
+    [theme.breakpoints.down("sm")]: {
+      gridTemplateColumns: "1fr",
+    },
   },
   icon: {
     fontSize: "3.5rem",

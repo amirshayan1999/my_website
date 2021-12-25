@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import Typography from "@material-ui/core/Typography";
-import { Grid } from "@material-ui/core";
 
 import useStyles from "./styles/Sernice.styles";
 interface ServiceProps {
@@ -11,8 +10,8 @@ interface ServiceProps {
 const Service: React.FC<ServiceProps> = ({ icon, title, desc }) => {
   const classes = useStyles();
   return (
-    <Grid container lg={4} md={6} xs={12} className={classes.root}>
-      <Grid className={classes.service}>
+    <div className={classes.root}>
+      <div className={classes.service}>
         {icon}
         <Typography variant="h5" className={classes.title}>
           {title}
@@ -20,8 +19,8 @@ const Service: React.FC<ServiceProps> = ({ icon, title, desc }) => {
         <Typography variant="body1" className={classes.desc}>
           {desc}
         </Typography>
-      </Grid>
-    </Grid>
+      </div>
+    </div>
   );
 };
 

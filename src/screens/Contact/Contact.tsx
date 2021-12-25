@@ -16,51 +16,48 @@ function Contact() {
     <Grid className={classes.root}>
       <Title text={translate.contact} />
       <Grid container direction="row">
-        <Grid xs={12} lg={6} className={classes.formContainer}>
-          <Typography variant="h4" className={classes.title}>
-            {translate.getInTouch}
-          </Typography>
+        <Grid item xs={12} lg={6} className={classes.formContainer}>
+          <div className={classes.titleContainer}>
+            <Typography variant="h4" className={classes.title}>
+              {translate.getInTouch}
+            </Typography>
+          </div>
           <TextField
             color="primary"
             className={classes.input}
             required
+            fullWidth
             label={translate.enterYourName}
-            defaultValue=""
             variant="outlined"
-            placeholder=" "
           />
-
           <TextField
             className={classes.input}
             required
+            fullWidth
             label={translate.enterYourEmail}
-            defaultValue=""
             variant="outlined"
-            placeholder=" "
           />
-
           <TextField
             className={classes.input}
             required
+            fullWidth
             label={translate.enterYourSubject}
-            defaultValue=""
             variant="outlined"
-            placeholder=" "
           />
           <TextField
             className={classes.input}
             label={translate.enterYourMessage}
             multiline
+            fullWidth
             rows={5}
-            defaultValue=""
             variant="outlined"
-            placeholder=" "
           />
-          <Button variant="outlined" className={classes.sendBtn} name="Send">
+
+          <Button variant="outlined" className={classes.sendBtn} fullWidth>
             {translate.send}
           </Button>
         </Grid>
-        <Grid xs={12} lg={6} className={classes.infoContainer}>
+        <Grid item xs={12} lg={6} className={classes.infoContainer}>
           <InfoBox
             title={translate.phone}
             desc={["(+98)9115647432", "(+98)9116074349"]}

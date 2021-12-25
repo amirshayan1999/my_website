@@ -1,6 +1,5 @@
 import React from "react";
 import { IconButton, Typography } from "@material-ui/core";
-import "../../assets/CSS/bgEffect.css";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import TelegramIcon from "@material-ui/icons/Telegram";
@@ -13,7 +12,7 @@ const Home = () => {
   const translate = getTranslate();
   return (
     <div className={classes.root}>
-      <div className="bg" />
+      <div className={classes.homeBackround} />
       <Typography variant="h1" className={classes.title}>
         {translate.hi1}
         <span className={classes.name}>{translate.name}</span>

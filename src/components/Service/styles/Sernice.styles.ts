@@ -4,6 +4,7 @@ import { getDirection } from "../../../localization";
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingLeft: 10,
+    display: "flex",
   },
   service: {
     width: "100%",

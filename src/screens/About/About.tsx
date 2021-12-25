@@ -17,17 +17,17 @@ function About() {
     link.click();
   };
   return (
-    <Grid container className={classes.root}>
+    <div className={classes.root}>
       <Title text={translate.aboutMe} />
       <Grid container direction="row">
-        <Grid item={true} xs={12} lg={6} className={classes.picContainer}>
+        <Grid item xs={12} lg={6} className={classes.picContainer}>
           <img
             src={aboutMePic}
             alt="aboutMePicture"
             className={classes.aboutMePic}
           />
         </Grid>
-        <Grid item={true} xs={12} lg={6} className={classes.textContainer}>
+        <Grid item xs={12} lg={6} className={classes.textContainer}>
           <Typography variant="h3" className={classes.marginBottom}>
             {translate.hi1}
             <span className={classes.name}>{translate.name}</span>
@@ -71,7 +71,7 @@ function About() {
         </Grid>
       </Grid>
       <Title text={translate.services} />
-      <Grid container direction="row" className={classes.servicesContainer}>
+      <div className={classes.servicesContainer}>
         <Service
           title={translate.webDesign}
           desc={translate.designDesc}
@@ -87,8 +87,8 @@ function About() {
           desc={translate.mobileAppDesc}
           icon={<PhoneIphoneIcon className={classes.icon} />}
         />
-      </Grid>
-    </Grid>
+      </div>
+    </div>
   );
 }
 

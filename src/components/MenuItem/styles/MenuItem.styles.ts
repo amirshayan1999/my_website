@@ -17,5 +17,11 @@ const useStyles = makeStyles(() => ({
       transition: "800ms cubic-bezier(0.25, 1, 0.5, 1)",
     },
   },
+  backgroundColorTransparent: {
+    backgroundColor: "transparent !important",
+  },
+  backgroundColorActiveItem: {
+    backgroundColor: "#e52764 !important",
+  },
 }));
 export default useStyles;

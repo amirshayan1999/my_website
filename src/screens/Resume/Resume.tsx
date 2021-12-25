@@ -10,16 +10,16 @@ const ResumeScreen = () => {
   const classes = useStyles();
   const translate = getTranslate();
   return (
-    <Grid className={classes.root}>
+    <div className={classes.root}>
       <Title text={translate.mySkills} />
       <Grid container direction="row">
-        <Grid xs={12} lg={6}>
+        <Grid item xs={12} lg={6}>
           <Skill title={translate.html5} val={76} />
           <Skill title={translate.js} val={78} />
           <Skill title={translate.reactJS} val={83} />
           <Skill title={translate.materialUI} val={68} />
         </Grid>
-        <Grid xs={12} lg={6}>
+        <Grid item xs={12} lg={6}>
           <Skill title={translate.css3} val={80} />
           <Skill title={translate.reactNative} val={70} />
           <Skill title={translate.bootstrap} val={39} />
@@ -63,7 +63,7 @@ const ResumeScreen = () => {
           desc={translate.secondLocation}
         />
       </Grid>
-    </Grid>
+    </div>
   );
 };
 

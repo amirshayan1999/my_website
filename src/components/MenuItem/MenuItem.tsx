@@ -23,10 +23,12 @@ const MenuItem: React.FC<MenuItemProps> = ({
         pageFunc();
         mobileFunc();
       }}
-      style={{
-        backgroundColor: page === num ? "#e52764" : "transparent",
-      }}
-      className={classes.menuItemsRoot}
+      className={[
+        classes.menuItemsRoot,
+        page === num
+          ? classes.backgroundColorActiveItem
+          : classes.backgroundColorTransparent,
+      ].join(" ")}
       button
     >
       <ListItemText

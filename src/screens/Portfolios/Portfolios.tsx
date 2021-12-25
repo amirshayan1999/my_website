@@ -13,42 +13,42 @@ const Portfolios = () => {
       <Title text={translate.portfolios} />
       <Grid container direction="row">
         <Grid className={classes.portfolioContainer}>
-          <Grid xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={6} lg={4}>
             <Portfolio
               imgSrc={photo}
               title="portfolio sample"
               language="react JS"
             />
           </Grid>
-          <Grid xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={6} lg={4}>
             <Portfolio
               imgSrc={photo}
               title="portfolio sample"
               language="react JS"
             />
           </Grid>
-          <Grid xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={6} lg={4}>
             <Portfolio
               imgSrc={photo}
               title="portfolio sample"
               language="react JS"
             />
           </Grid>
-          <Grid xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={6} lg={4}>
             <Portfolio
               imgSrc={photo}
               title="portfolio sample"
               language="react JS"
             />
           </Grid>
-          <Grid xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={6} lg={4}>
             <Portfolio
               imgSrc={photo}
               title="portfolio sample"
               language="react JS"
             />
           </Grid>
-          <Grid xs={12} md={6} lg={4}>
+          <Grid item xs={12} md={6} lg={4}>
             <Portfolio
               imgSrc={photo}
               title="portfolio sample"

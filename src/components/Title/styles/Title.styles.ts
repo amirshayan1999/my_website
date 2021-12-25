@@ -4,7 +4,7 @@ import { getDirection } from "../../../localization";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
-    height: "120px",
+    height: 120,
     display: "flex",
     justifyContent: "flex-start",
     position: "relative",
@@ -17,15 +17,15 @@ const useStyles = makeStyles((theme) => ({
     },
     "&::before": {
       content: "''",
-      width: "150px",
-      height: "5px",
+      width: 150,
+      height: 5,
       backgroundColor: "#e52764",
       position: "absolute",
       top: "auto",
       left: 0,
       bottom: 0,
       margin: "30px 0 0 50px",
-      borderRadius: "100px",
+      borderRadius: 5,
     },
     "&:hover": {
       "&::before": {
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
         left: 0,
         bottom: 0,
         margin: "30px 0 0 35px",
-        borderRadius: "100px",
+        borderRadius: 5,
       },
     },
   },

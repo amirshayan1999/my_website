@@ -1,8 +1,9 @@
 import { makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     padding: "0 20px",
+    display: "flex",
   },
   service: {
     width: "100%",
@@ -29,6 +30,11 @@ const useStyles = makeStyles(() => ({
   title: {
     paddingBottom: 10,
     position: "relative",
+  },
+  desc: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 15,
+    },
   },
 }));
 export default useStyles;

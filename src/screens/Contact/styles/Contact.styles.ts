@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "flex-start",
     flexDirection: "column",
+    alignItems: "center",
     paddingLeft: 40,
     paddingRight: 40,
   },
@@ -16,6 +17,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     marginBottom: 10,
     marginLeft: 10,
+  },
+  titleContainer: {
+    display: "flex",
+    justifyContent: "flex-start",
+    width: "100%",
   },
   input: {
     margin: 10,
