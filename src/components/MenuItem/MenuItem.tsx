@@ -6,8 +6,9 @@ import { Link, useLocation } from "react-router-dom";
 
 interface MenuItemProps {
   text: string;
+  link: string;
 }
-const MenuItem: React.FC<MenuItemProps> = ({ text }) => {
+const MenuItem: React.FC<MenuItemProps> = ({ text, link }) => {
   const classes = useStyles();
   const location = useLocation();
 
@@ -15,7 +16,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ text }) => {
     <ListItem
       button
       component={Link}
-      to={`${text.toLowerCase()}`}
+      to={link}
       className={[
         classes.menuItemsRoot,
         location.pathname.match(text.toLowerCase())

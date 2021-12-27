@@ -24,7 +24,7 @@ const RoutesMain = () => {
       <Route exact path="/resume">
         <Resume />
       </Route>
-      <Route exact path="/portfolio">
+      <Route exact path="/portfolios">
         <Portfolios />
       </Route>
       <Redirect to="/home" />

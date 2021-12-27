@@ -33,11 +33,11 @@ function ResponsiveDrawer() {
       <Divider />
       <div className={classes.mainDrawer}>
         <List className={classes.list}>
-          <MenuItem text={translate.home} />
-          <MenuItem text={translate.about} />
-          <MenuItem text={translate.resume} />
-          <MenuItem text={translate.portfolios} />
-          <MenuItem text={translate.contact} />
+          <MenuItem text={translate.home} link="home" />
+          <MenuItem text={translate.about} link="about" />
+          <MenuItem text={translate.resume} link="resume" />
+          <MenuItem text={translate.portfolios} link="portfolios" />
+          <MenuItem text={translate.contact} link="contact" />
         </List>
       </div>
       <div className={classes.bottomDrawer}>
