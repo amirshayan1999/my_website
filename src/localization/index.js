@@ -35,8 +35,8 @@ const getTranslate = () => {
 export { getTranslate };
 
 const changeLang = (lang) => {
-  if (localStorage.getItem("lang") !== lang) localStorage.setItem("lang", lang);
-  else return;
-  window.location.reload();
+  localStorage.setItem("lang", lang);
+
+  // window.location.reload();
 };
 export { changeLang };
