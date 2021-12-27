@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Divider from "@material-ui/core/Divider";
@@ -9,39 +9,20 @@ import List from "@material-ui/core/List";
 import MenuIcon from "@material-ui/icons/Menu";
 import profilePhoto from "../../assets/images/profile.jpg";
 import { getTranslate, changeLang, lang } from "../../localization";
-import { Button, Fade } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import LanguageIcon from "@material-ui/icons/Language";
-import "../../assets/CSS/index.css";
 import MenuItem from "../../components/MenuItem/MenuItem";
 import useStyles from "./styles/index.styles";
-import ChangePage from "./ChangePage";
 const translate = getTranslate();
 
-function ResponsiveDrawer(props: any) {
-  const { window } = props;
+function ResponsiveDrawer() {
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
-  const [page, setPage] = useState<number>(0);
-  const [changed, setChanged] = useState<boolean>(true);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
-  const setMobileOpenFalse = () => {
-    setMobileOpen(false);
-  };
-  const setNewPage = (num: number) => {
-    setPage(num);
-  };
-  useEffect(() => {
-    setChanged((prev) => !prev);
-    setTimeout(() => {
-      setChanged((prev) => !prev);
-    }, 300);
-  }, [page]);
+  const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
 
   const drawer = (
-    <>
+    <div>
       <div className={classes.topDrawer}>
         <img
           src={profilePhoto}
@@ -52,46 +33,15 @@ function ResponsiveDrawer(props: any) {
       <Divider />
       <div className={classes.mainDrawer}>
         <List className={classes.list}>
-          <MenuItem
-            mobileFunc={setMobileOpenFalse}
-            pageFunc={() => setNewPage(0)}
-            page={page}
-            text={translate.home}
-            num={0}
-          />
-          <MenuItem
-            mobileFunc={setMobileOpenFalse}
-            pageFunc={() => setNewPage(1)}
-            page={page}
-            text={translate.about}
-            num={1}
-          />
-          <MenuItem
-            mobileFunc={setMobileOpenFalse}
-            pageFunc={() => setNewPage(2)}
-            page={page}
-            text={translate.resume}
-            num={2}
-          />
-          <MenuItem
-            mobileFunc={setMobileOpenFalse}
-            pageFunc={() => setNewPage(3)}
-            page={page}
-            text={translate.portfolios}
-            num={3}
-          />
-          <MenuItem
-            mobileFunc={setMobileOpenFalse}
-            pageFunc={() => setNewPage(4)}
-            page={page}
-            text={translate.contact}
-            num={4}
-          />
+          <MenuItem text={translate.home} />
+          <MenuItem text={translate.about} />
+          <MenuItem text={translate.resume} />
+          <MenuItem text={translate.portfolios} />
+          <MenuItem text={translate.contact} />
         </List>
       </div>
       <div className={classes.bottomDrawer}>
         <Button
-          name="ChangeLanguageToEnglish"
           className={[
             classes.button,
             lang === "en" ? classes.inActiveButton : classes.activeButton,
@@ -117,18 +67,13 @@ function ResponsiveDrawer(props: any) {
           فارسی
         </Button>
       </div>
-    </>
+    </div>
   );
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
-
   return (
     <div className={classes.root}>
       <CssBaseline />
       <IconButton
         color="inherit"
-        aria-label="open drawer"
         edge="start"
         onClick={handleDrawerToggle}
         className={`${classes.menuButton} ${classes.menuIcon}`}
@@ -138,7 +83,7 @@ function ResponsiveDrawer(props: any) {
       <nav className={classes.drawer} aria-label="mailbox folders">
         <Hidden smUp implementation="css">
           <Drawer
-            container={container}
+            // container={container}
             variant="temporary"
             open={mobileOpen}
             onClose={handleDrawerToggle}
@@ -164,16 +109,14 @@ function ResponsiveDrawer(props: any) {
           </Drawer>
         </Hidden>
       </nav>
-      <Fade
+      {/* <Fade
         in={changed}
         timeout={{
           appear: 500,
           enter: 300,
           exit: 0,
         }}
-      >
-        <main className={classes.content}>{ChangePage(page)}</main>
-      </Fade>
+      ></Fade> */}
     </div>
   );
 }

@@ -4,7 +4,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    width: "100%",
+    // width: "100%",
+    flex: 1,
     height: "100vh",
   },
   experienceContainer: {

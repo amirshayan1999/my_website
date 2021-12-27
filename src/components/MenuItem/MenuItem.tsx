@@ -2,34 +2,26 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
 import ListItem from "@material-ui/core/ListItem";
 import useStyles from "./styles/MenuItem.styles";
+import { Link, useLocation } from "react-router-dom";
+
 interface MenuItemProps {
-  pageFunc: () => void;
-  mobileFunc: () => void;
-  page: number;
-  num: number;
   text: string;
 }
-const MenuItem: React.FC<MenuItemProps> = ({
-  pageFunc,
-  mobileFunc,
-  page,
-  num,
-  text,
-}) => {
+const MenuItem: React.FC<MenuItemProps> = ({ text }) => {
   const classes = useStyles();
+  const location = useLocation();
+
   return (
     <ListItem
-      onClick={() => {
-        pageFunc();
-        mobileFunc();
-      }}
+      button
+      component={Link}
+      to={`${text.toLowerCase()}`}
       className={[
         classes.menuItemsRoot,
-        page === num
+        location.pathname.match(text.toLowerCase())
           ? classes.backgroundColorActiveItem
           : classes.backgroundColorTransparent,
       ].join(" ")}
-      button
     >
       <ListItemText
         disableTypography={true}

@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core";
+import { getDirection } from "../../../localization";
 
 const drawerWidth = 260;
 
@@ -53,30 +54,37 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   bottomDrawer: {
+    marginTop: 10,
     flexGrow: 1,
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
+    marginRight: 20,
+    marginLeft: 20,
   },
   button: {
     lineHeight: 1,
     borderRadius: 0,
-    height: "35%",
+    height: 35,
+    width: "100%",
   },
   inActiveButton: {
-    borderBottomLeftRadius: 5,
-    borderTopLeftRadius: 5,
+    borderBottomRightRadius: getDirection() === "ltr" ? 0 : 5,
+    borderTopRightRadius: getDirection() === "ltr" ? 0 : 5,
+    borderBottomLeftRadius: getDirection() === "ltr" ? 5 : 0,
+    borderTopLeftRadius: getDirection() === "ltr" ? 5 : 0,
     "&:hover": {
       backgroundColor: "#0a0a1f",
     },
   },
   activeButton: {
     backgroundColor: "#e6e6e6",
-    borderBottomRightRadius: 5,
-    borderTopRightRadius: 5,
+    borderBottomRightRadius: getDirection() === "ltr" ? 5 : 0,
+    borderTopRightRadius: getDirection() === "ltr" ? 5 : 0,
+    borderBottomLeftRadius: getDirection() === "ltr" ? 0 : 5,
+    borderTopLeftRadius: getDirection() === "ltr" ? 0 : 5,
     color: "#0a0a1f",
-    width: "50%",
     "&:hover": {
       background: "#0a0a1f",
       color: "#e6e6e6",

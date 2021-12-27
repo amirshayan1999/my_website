@@ -6,7 +6,7 @@ import Experience from "../../components/Experience/Experience";
 import WorkIcon from "@material-ui/icons/Work";
 import SchoolIcon from "@material-ui/icons/School";
 import useStyles from "./styles/Resume.styles";
-const ResumeScreen = () => {
+const Resume = () => {
   const classes = useStyles();
   const translate = getTranslate();
   return (
@@ -67,4 +67,4 @@ const ResumeScreen = () => {
   );
 };
 
-export default ResumeScreen;
+export default Resume;
