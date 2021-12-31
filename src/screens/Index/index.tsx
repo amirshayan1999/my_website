@@ -42,6 +42,7 @@ function ResponsiveDrawer() {
       </div>
       <div className={classes.bottomDrawer}>
         <Button
+          name="changeLangToEn"
           className={[
             classes.button,
             lang === "en" ? classes.inActiveButton : classes.activeButton,
@@ -77,6 +78,7 @@ function ResponsiveDrawer() {
         edge="start"
         onClick={handleDrawerToggle}
         className={`${classes.menuButton} ${classes.menuIcon}`}
+        name="menuButton"
       >
         <MenuIcon />
       </IconButton>

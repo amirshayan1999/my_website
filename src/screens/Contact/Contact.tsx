@@ -53,7 +53,12 @@ function Contact() {
             variant="outlined"
           />
 
-          <Button variant="outlined" className={classes.sendBtn} fullWidth>
+          <Button
+            variant="outlined"
+            className={classes.sendBtn}
+            fullWidth
+            name="send-message"
+          >
             {translate.send}
           </Button>
         </Grid>
