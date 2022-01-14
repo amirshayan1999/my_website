@@ -38,7 +38,7 @@ const Home = () => {
           </IconButton>
         </a>
 
-        <a href="https://t.me/arsham_79" target="_blank" rel="noreferrer">
+        <a href="https://t.me/arsham79" target="_blank" rel="noreferrer">
           <IconButton className={classes.iconBTN} name="TelegramButton">
             <TelegramIcon className={classes.Icon} />
           </IconButton>
