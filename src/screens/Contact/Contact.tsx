@@ -24,22 +24,26 @@ function Contact() {
     <Grid className={classes.root}>
       <Title text={translate.contact} />
       <Grid container direction="row">
-        <Formik
-          validationSchema={contactValidationSchema}
-          initialValues={initialValues}
-          onSubmit={async ({ name, email, message, subject }) => {
-            await fetch(
-              `https://api.telegram.org/bot${process.env.REACT_APP_BOT_TOKEN}/sendMessage?chat_id=${process.env.REACT_APP_TELE_ID}&text=${name} (${email})%0A%0A${subject}%0A%0A${message}`
-            );
-          }}
-        >
-          {({ values, handleBlur, isSubmitting, handleChange }) => (
-            <Grid item xs={12} lg={6} className={classes.formContainer}>
-              <div className={classes.titleContainer}>
-                <Typography variant="h4" className={classes.title}>
-                  {translate.getInTouch}
-                </Typography>
-              </div>
+        <Grid item xs={12} lg={6} className={classes.formContainer}>
+          <div className={classes.titleContainer}>
+            <Typography variant="h4" className={classes.title}>
+              {translate.getInTouch}
+            </Typography>
+          </div>
+          <Formik
+            validationSchema={contactValidationSchema}
+            initialValues={initialValues}
+            onSubmit={async ({ name, email, message, subject }, args) => {
+              const response = await fetch(
+                `https://api.telegram.org/bot${process.env.REACT_APP_BOT_TOKEN}/sendMessage?chat_id=${process.env.REACT_APP_TELE_ID}&text=${name} (${email})%0A%0A${subject}%0A%0A${message}`
+              );
+              response.json().then((res) => {
+                console.log(res);
+              });
+              args.resetForm();
+            }}
+          >
+            {({ values, handleBlur, isSubmitting, handleChange }) => (
               <Form>
                 <TextField
                   color="primary"
@@ -103,9 +107,10 @@ function Contact() {
                   {translate.send}
                 </Button>
               </Form>
-            </Grid>
-          )}
-        </Formik>
+            )}
+          </Formik>
+        </Grid>
+
         <Grid item xs={12} lg={6} className={classes.infoContainer}>
           <InfoBox
             title={translate.phone}
