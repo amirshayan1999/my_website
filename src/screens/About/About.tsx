@@ -10,6 +10,7 @@ import useStyles from "./styles/About.styles";
 function About() {
   const classes = useStyles();
   const translate = getTranslate();
+  
   const onDownload = () => {
     const link = document.createElement("a");
     link.download = `cv.jpg`;

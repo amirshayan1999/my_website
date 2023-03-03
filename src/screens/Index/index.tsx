@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Divider from "@material-ui/core/Divider";
 import Drawer from "@material-ui/core/Drawer";
-import Hidden from "@material-ui/core/Hidden";
 import IconButton from "@material-ui/core/IconButton";
 import List from "@material-ui/core/List";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -13,6 +12,7 @@ import { Button } from "@material-ui/core";
 import LanguageIcon from "@material-ui/icons/Language";
 import MenuItem from "../../components/MenuItem/MenuItem";
 import useStyles from "./styles/index.styles";
+import { Hidden } from "@mui/material";
 const translate = getTranslate();
 
 function ResponsiveDrawer() {

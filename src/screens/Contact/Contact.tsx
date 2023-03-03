@@ -12,6 +12,7 @@ import useStyles from "./styles/Contact.styles";
 function Contact() {
   const classes = useStyles();
   const translate = getTranslate();
+  
   return (
     <Grid className={classes.root}>
       <Title text={translate.contact} />
