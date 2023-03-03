@@ -74,5 +74,6 @@ const info = {
   send: "Send Massage",
   emailAddress: "arsham.ramezani@gmail.com",
   addressDesc: "Iran, Tehran",
+  messageSent: "Your message has been sent successfully",
 };
 export default info;

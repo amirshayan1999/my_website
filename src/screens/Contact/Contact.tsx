@@ -11,6 +11,7 @@ import InfoBox from "../../components/InfoBox/InfoBox";
 import useStyles from "./styles/Contact.styles";
 import { Form, Formik } from "formik";
 import contactValidationSchema from "./validationSchema";
+import { toast } from "react-toastify";
 function Contact() {
   const classes = useStyles();
   const translate = getTranslate();
@@ -38,7 +39,9 @@ function Contact() {
                 `https://api.telegram.org/bot${process.env.REACT_APP_BOT_TOKEN}/sendMessage?chat_id=${process.env.REACT_APP_TELE_ID}&text=${name} (${email})%0A%0A${subject}%0A%0A${message}`
               );
               response.json().then((res) => {
-                console.log(res);
+                if (res.ok) {
+                  toast.success(translate.messageSent);
+                }
               });
               args.resetForm();
             }}

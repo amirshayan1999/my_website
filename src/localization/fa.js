@@ -73,5 +73,6 @@ const info = {
   send: "ارسال پیام",
   emailAddress: "arsham.ramezani@gmail.com",
   addressDesc: "ایران, تهران",
+  messageSent: "پیام شما ارسال شد",
 };
 export default info;

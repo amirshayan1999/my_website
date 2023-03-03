@@ -1,4 +1,3 @@
-import React from "react";
 import theme from "./themes/theme";
 import {
   ThemeProvider,
@@ -10,6 +9,9 @@ import { create } from "jss";
 import rtl from "jss-rtl";
 import { getDirection } from "./localization/index";
 import Routes from "./routes/index";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+
 const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 
 const App = () => {
@@ -17,6 +19,18 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <StylesProvider>
         <CssBaseline />
+        <ToastContainer
+          position="bottom-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
         <Routes />
       </StylesProvider>
     </ThemeProvider>
@@ -24,6 +38,18 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <StylesProvider jss={jss}>
         <CssBaseline />
+        <ToastContainer
+          position="bottom-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
         <Routes />
       </StylesProvider>
     </ThemeProvider>
