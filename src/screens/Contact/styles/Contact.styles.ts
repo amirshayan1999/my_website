@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     paddingLeft: 40,
     paddingRight: 40,
+    width: "100%",
   },
   title: {
     textAlign: "left",

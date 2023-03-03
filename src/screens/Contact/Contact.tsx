@@ -9,60 +9,103 @@ import "../../assets/CSS/contactMe.css";
 import InfoBox from "../../components/InfoBox/InfoBox";
 
 import useStyles from "./styles/Contact.styles";
+import { Form, Formik } from "formik";
+import contactValidationSchema from "./validationSchema";
 function Contact() {
   const classes = useStyles();
   const translate = getTranslate();
-  
+  const initialValues = {
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  };
   return (
     <Grid className={classes.root}>
       <Title text={translate.contact} />
       <Grid container direction="row">
-        <Grid item xs={12} lg={6} className={classes.formContainer}>
-          <div className={classes.titleContainer}>
-            <Typography variant="h4" className={classes.title}>
-              {translate.getInTouch}
-            </Typography>
-          </div>
-          <TextField
-            color="primary"
-            className={classes.input}
-            required
-            fullWidth
-            label={translate.enterYourName}
-            variant="outlined"
-          />
-          <TextField
-            className={classes.input}
-            required
-            fullWidth
-            label={translate.enterYourEmail}
-            variant="outlined"
-          />
-          <TextField
-            className={classes.input}
-            required
-            fullWidth
-            label={translate.enterYourSubject}
-            variant="outlined"
-          />
-          <TextField
-            className={classes.input}
-            label={translate.enterYourMessage}
-            multiline
-            fullWidth
-            rows={5}
-            variant="outlined"
-          />
+        <Formik
+          validationSchema={contactValidationSchema}
+          initialValues={initialValues}
+          onSubmit={async ({ name, email, message, subject }) => {
+            await fetch(
+              `https://api.telegram.org/bot${process.env.REACT_APP_BOT_TOKEN}/sendMessage?chat_id=${process.env.REACT_APP_TELE_ID}&text=${name} (${email})%0A%0A${subject}%0A%0A${message}`
+            );
+          }}
+        >
+          {({ values, handleBlur, isSubmitting, handleChange }) => (
+            <Grid item xs={12} lg={6} className={classes.formContainer}>
+              <div className={classes.titleContainer}>
+                <Typography variant="h4" className={classes.title}>
+                  {translate.getInTouch}
+                </Typography>
+              </div>
+              <Form>
+                <TextField
+                  color="primary"
+                  className={classes.input}
+                  name="name"
+                  value={values.name}
+                  onBlur={handleBlur}
+                  disabled={isSubmitting}
+                  onChange={handleChange}
+                  required
+                  fullWidth
+                  label={translate.enterYourName}
+                  variant="outlined"
+                />
+                <TextField
+                  className={classes.input}
+                  required
+                  fullWidth
+                  label={translate.enterYourEmail}
+                  variant="outlined"
+                  name="email"
+                  value={values.email}
+                  onBlur={handleBlur}
+                  disabled={isSubmitting}
+                  onChange={handleChange}
+                  type="email"
+                />
+                <TextField
+                  className={classes.input}
+                  required
+                  fullWidth
+                  label={translate.enterYourSubject}
+                  variant="outlined"
+                  name="subject"
+                  value={values.subject}
+                  onBlur={handleBlur}
+                  disabled={isSubmitting}
+                  onChange={handleChange}
+                />
+                <TextField
+                  className={classes.input}
+                  label={translate.enterYourMessage}
+                  multiline
+                  fullWidth
+                  rows={5}
+                  variant="outlined"
+                  name="message"
+                  value={values.message}
+                  onBlur={handleBlur}
+                  disabled={isSubmitting}
+                  onChange={handleChange}
+                />
 
-          <Button
-            variant="outlined"
-            className={classes.sendBtn}
-            fullWidth
-            name="send-message"
-          >
-            {translate.send}
-          </Button>
-        </Grid>
+                <Button
+                  variant="outlined"
+                  className={classes.sendBtn}
+                  fullWidth
+                  name="send-message"
+                  type="submit"
+                >
+                  {translate.send}
+                </Button>
+              </Form>
+            </Grid>
+          )}
+        </Formik>
         <Grid item xs={12} lg={6} className={classes.infoContainer}>
           <InfoBox
             title={translate.phone}
