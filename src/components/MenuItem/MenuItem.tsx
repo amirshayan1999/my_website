@@ -3,6 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import ListItem from "@material-ui/core/ListItem";
 import useStyles from "./styles/MenuItem.styles";
 import { Link, useLocation } from "react-router-dom";
+import { getTranslate } from "../../localization";
 
 interface MenuItemProps {
   text: string;
@@ -11,6 +12,7 @@ interface MenuItemProps {
 const MenuItem: React.FC<MenuItemProps> = ({ text, link }) => {
   const classes = useStyles();
   const location = useLocation();
+  const translate = getTranslate();
 
   return (
     <ListItem
@@ -26,7 +28,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ text, link }) => {
     >
       <ListItemText
         disableTypography={true}
-        children={<Typography variant="body2">{text}</Typography>}
+        children={<Typography variant="body2">{translate[text]}</Typography>}
       />
       <div className={classes.overlay} />
     </ListItem>

@@ -8,9 +8,9 @@ import { CssBaseline } from "@material-ui/core";
 import { create } from "jss";
 import rtl from "jss-rtl";
 import { getDirection } from "./localization/index";
-import Routes from "./routes/index";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import Routes from "./routes";
 
 const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 

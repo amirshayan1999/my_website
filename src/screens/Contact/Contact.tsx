@@ -91,7 +91,7 @@ function Contact() {
                   label={translate.enterYourMessage}
                   multiline
                   fullWidth
-                  rows={5}
+                  minRows={5}
                   variant="outlined"
                   name="message"
                   value={values.message}
