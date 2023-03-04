@@ -1,13 +1,13 @@
-import React, { ReactNode } from "react";
-import Typography from "@material-ui/core/Typography";
-import useStyles from "./styles/InfoBox.styles";
+import React, { ReactNode } from 'react'
+import Typography from '@material-ui/core/Typography'
+import useStyles from './styles/InfoBox.styles'
 interface InfoBoxProps {
-  icon: ReactNode;
-  title: string;
-  desc: string[];
+  icon: ReactNode
+  title: string
+  desc: string[]
 }
 const InfoBox: React.FC<InfoBoxProps> = ({ icon, title, desc }) => {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
     <div className={classes.root}>
       <div className={classes.service}>
@@ -25,7 +25,7 @@ const InfoBox: React.FC<InfoBoxProps> = ({ icon, title, desc }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default InfoBox;
+export default InfoBox

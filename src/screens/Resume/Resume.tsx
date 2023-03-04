@@ -1,14 +1,14 @@
-import { getTranslate } from "../../localization";
-import Title from "../../components/Title/Title";
-import { Grid, Typography } from "@material-ui/core";
-import Skill from "../../components/Skill/Skill";
-import Experience from "../../components/Experience/Experience";
-import WorkIcon from "@material-ui/icons/Work";
-import SchoolIcon from "@material-ui/icons/School";
-import useStyles from "./styles/Resume.styles";
+import { getTranslate } from '../../localization'
+import Title from '../../components/Title/Title'
+import { Grid, Typography } from '@material-ui/core'
+import Skill from '../../components/Skill/Skill'
+import Experience from '../../components/Experience/Experience'
+import WorkIcon from '@material-ui/icons/Work'
+import SchoolIcon from '@material-ui/icons/School'
+import useStyles from './styles/Resume.styles'
 const Resume = () => {
-  const classes = useStyles();
-  const translate = getTranslate();
+  const classes = useStyles()
+  const translate = getTranslate()
   return (
     <div className={classes.root}>
       <Title text={translate.mySkills} />
@@ -64,7 +64,7 @@ const Resume = () => {
         />
       </Grid>
     </div>
-  );
-};
+  )
+}
 
-export default Resume;
+export default Resume

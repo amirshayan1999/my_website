@@ -1,15 +1,15 @@
-import React from "react";
-import { IconButton, Typography } from "@material-ui/core";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import TelegramIcon from "@material-ui/icons/Telegram";
-import { getTranslate } from "../../localization";
+import React from 'react'
+import { IconButton, Typography } from '@material-ui/core'
+import LinkedInIcon from '@material-ui/icons/LinkedIn'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import TelegramIcon from '@material-ui/icons/Telegram'
+import { getTranslate } from '../../localization'
 
-import useStyles from "./styles/Home.styles";
+import useStyles from './styles/Home.styles'
 
 const Home = () => {
-  const classes = useStyles();
-  const translate = getTranslate();
+  const classes = useStyles()
+  const translate = getTranslate()
   return (
     <div className={classes.root}>
       <div className={classes.homeBackround} />
@@ -25,8 +25,7 @@ const Home = () => {
         <a
           href="https://www.linkedin.com/in/arsham-ramzani-0905a8194/"
           target="_blank"
-          rel="noreferrer"
-        >
+          rel="noreferrer">
           <IconButton className={classes.iconBTN} name="LinkedInButton">
             <LinkedInIcon className={classes.Icon} />
           </IconButton>
@@ -45,7 +44,7 @@ const Home = () => {
         </a>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

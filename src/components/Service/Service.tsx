@@ -1,14 +1,14 @@
-import React, { ReactNode } from "react";
-import Typography from "@material-ui/core/Typography";
+import React, { ReactNode } from 'react'
+import Typography from '@material-ui/core/Typography'
 
-import useStyles from "./styles/Sernice.styles";
+import useStyles from './styles/Sernice.styles'
 interface ServiceProps {
-  icon: ReactNode;
-  title: string;
-  desc: string;
+  icon: ReactNode
+  title: string
+  desc: string
 }
 const Service: React.FC<ServiceProps> = ({ icon, title, desc }) => {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
     <div className={classes.root}>
       <div className={classes.service}>
@@ -21,7 +21,7 @@ const Service: React.FC<ServiceProps> = ({ icon, title, desc }) => {
         </Typography>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Service;
+export default Service

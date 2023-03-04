@@ -1,13 +1,13 @@
-import React from "react";
-import { getTranslate } from "../../localization";
-import Title from "../../components/Title/Title";
-import { Grid } from "@material-ui/core";
-import Portfolio from "../../components/Portfolio/Portfolio";
-import photo from "../../assets/images/portfolio.png";
-import useStyles from "./styles/Portfolios.styles";
+import React from 'react'
+import { getTranslate } from '../../localization'
+import Title from '../../components/Title/Title'
+import { Grid } from '@material-ui/core'
+import Portfolio from '../../components/Portfolio/Portfolio'
+import photo from '../../assets/images/portfolio.png'
+import useStyles from './styles/Portfolios.styles'
 const Portfolios = () => {
-  const classes = useStyles();
-  const translate = getTranslate();
+  const classes = useStyles()
+  const translate = getTranslate()
   return (
     <Grid className={classes.root}>
       <Title text={translate.portfolios} />
@@ -58,7 +58,7 @@ const Portfolios = () => {
         </Grid>
       </Grid>
     </Grid>
-  );
-};
+  )
+}
 
-export default Portfolios;
+export default Portfolios

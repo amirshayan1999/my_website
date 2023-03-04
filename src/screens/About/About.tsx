@@ -1,32 +1,28 @@
-import { getTranslate } from "../../localization";
-import Title from "../../components/Title/Title";
-import aboutMePic from "../../assets/images/aboutMePic.jpg";
-import { Button, Grid, Typography } from "@material-ui/core";
-import Service from "../../components/Service/Service";
-import PaletteIcon from "@material-ui/icons/Palette";
-import PhoneIphoneIcon from "@material-ui/icons/PhoneIphone";
-import CodeIcon from "@material-ui/icons/Code";
-import useStyles from "./styles/About.styles";
+import { getTranslate } from '../../localization'
+import Title from '../../components/Title/Title'
+import aboutMePic from '../../assets/images/aboutMePic.jpg'
+import { Button, Grid, Typography } from '@material-ui/core'
+import Service from '../../components/Service/Service'
+import PaletteIcon from '@material-ui/icons/Palette'
+import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone'
+import CodeIcon from '@material-ui/icons/Code'
+import useStyles from './styles/About.styles'
 function About() {
-  const classes = useStyles();
-  const translate = getTranslate();
-  
+  const classes = useStyles()
+  const translate = getTranslate()
+
   const onDownload = () => {
-    const link = document.createElement("a");
-    link.download = `cv.jpg`;
-    link.href = "../../public/files/cv.jpg";
-    link.click();
-  };
+    const link = document.createElement('a')
+    link.download = `cv.jpg`
+    link.href = '../../public/files/cv.jpg'
+    link.click()
+  }
   return (
     <div className={classes.root}>
       <Title text={translate.aboutMe} />
       <Grid container direction="row">
         <Grid item xs={12} lg={6} className={classes.picContainer}>
-          <img
-            src={aboutMePic}
-            alt="aboutMePicture"
-            className={classes.aboutMePic}
-          />
+          <img src={aboutMePic} alt="about-me" className={classes.aboutMePic} />
         </Grid>
         <Grid item xs={12} lg={6} className={classes.textContainer}>
           <Typography variant="h3" className={classes.marginBottom}>
@@ -36,24 +32,23 @@ function About() {
           </Typography>
           <Typography
             variant="body1"
-            className={`${classes.info} ${classes.marginBottom}`}
-          >
+            className={`${classes.info} ${classes.marginBottom}`}>
             {translate.homeDesc}
           </Typography>
           <Typography variant="body1" className={classes.info}>
-            <b className={classes.bold}>{translate.fullName}</b>:{" "}
+            <b className={classes.bold}>{translate.fullName}</b>:{' '}
             {translate.name}
           </Typography>
           <Typography variant="body1" className={classes.info}>
-            <b className={classes.bold}>{translate.age}</b>: 20{" "}
+            <b className={classes.bold}>{translate.age}</b>: 20{' '}
             {translate.years}
           </Typography>
           <Typography variant="body1" className={classes.info}>
-            <b className={classes.bold}>{translate.nationality}</b>:{" "}
+            <b className={classes.bold}>{translate.nationality}</b>:{' '}
             {translate.iranian}
           </Typography>
           <Typography variant="body1" className={classes.info}>
-            <b className={classes.bold}>{translate.languages}</b>:{" "}
+            <b className={classes.bold}>{translate.languages}</b>:{' '}
             {translate.persian}, {translate.english}, {translate.german}
           </Typography>
           <Typography variant="body1" className={classes.info}>
@@ -64,8 +59,7 @@ function About() {
               name="Download"
               onClick={onDownload}
               variant="outlined"
-              className={classes.cvButton}
-            >
+              className={classes.cvButton}>
               {translate.downloadcv}
             </Button>
           </div>
@@ -90,7 +84,7 @@ function About() {
         />
       </div>
     </div>
-  );
+  )
 }
 
-export default About;
+export default About

@@ -1,25 +1,24 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Divider from "@material-ui/core/Divider";
-import Drawer from "@material-ui/core/Drawer";
-import IconButton from "@material-ui/core/IconButton";
-import List from "@material-ui/core/List";
-import MenuIcon from "@material-ui/icons/Menu";
-import profilePhoto from "../../assets/images/profile.jpg";
-import { getTranslate, changeLang, lang } from "../../localization";
-import { Button } from "@material-ui/core";
-import LanguageIcon from "@material-ui/icons/Language";
-import MenuItem from "../../components/MenuItem/MenuItem";
-import useStyles from "./styles/index.styles";
-import { Hidden } from "@mui/material";
-const translate = getTranslate();
+import { useState } from 'react'
+import PropTypes from 'prop-types'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import Divider from '@material-ui/core/Divider'
+import Drawer from '@material-ui/core/Drawer'
+import IconButton from '@material-ui/core/IconButton'
+import List from '@material-ui/core/List'
+import MenuIcon from '@material-ui/icons/Menu'
+import profilePhoto from '../../assets/images/profile.jpg'
+import { changeLang, lang } from '../../localization'
+import { Button } from '@material-ui/core'
+import LanguageIcon from '@material-ui/icons/Language'
+import MenuItem from '../../components/MenuItem/MenuItem'
+import useStyles from './styles/index.styles'
+import { Hidden } from '@mui/material'
 
 function ResponsiveDrawer() {
-  const classes = useStyles();
-  const [mobileOpen, setMobileOpen] = useState<boolean>(false);
+  const classes = useStyles()
+  const [mobileOpen, setMobileOpen] = useState<boolean>(false)
 
-  const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
+  const handleDrawerToggle = () => setMobileOpen(!mobileOpen)
 
   const drawer = (
     <div>
@@ -33,11 +32,11 @@ function ResponsiveDrawer() {
       <Divider />
       <div className={classes.mainDrawer}>
         <List className={classes.list}>
-          <MenuItem text={"home"} link="home" />
-          <MenuItem text={"about"} link="about" />
-          <MenuItem text={"resume"} link="resume" />
-          <MenuItem text={"portfolios"} link="portfolios" />
-          <MenuItem text={"contact"} link="contact" />
+          <MenuItem text={'home'} link="home" />
+          <MenuItem text={'about'} link="about" />
+          <MenuItem text={'resume'} link="resume" />
+          <MenuItem text={'portfolios'} link="portfolios" />
+          <MenuItem text={'contact'} link="contact" />
         </List>
       </div>
       <div className={classes.bottomDrawer}>
@@ -45,31 +44,29 @@ function ResponsiveDrawer() {
           name="changeLangToEn"
           className={[
             classes.button,
-            lang === "en" ? classes.inActiveButton : classes.activeButton,
-          ].join(" ")}
-          onClick={() => changeLang("en")}
-          endIcon={lang === "fa" ? <LanguageIcon /> : undefined}
-        >
+            lang === 'en' ? classes.inActiveButton : classes.activeButton
+          ].join(' ')}
+          onClick={() => changeLang('en')}
+          endIcon={lang === 'fa' ? <LanguageIcon /> : undefined}>
           English
         </Button>
         <Button
           name="ChangeLanguageToPersian"
           className={[
             classes.button,
-            lang === "fa" ? classes.inActiveButton : classes.activeButton,
-          ].join(" ")}
-          onClick={() => changeLang("fa")}
-          endIcon={lang === "en" ? <LanguageIcon /> : undefined}
+            lang === 'fa' ? classes.inActiveButton : classes.activeButton
+          ].join(' ')}
+          onClick={() => changeLang('fa')}
+          endIcon={lang === 'en' ? <LanguageIcon /> : undefined}
           style={{
-            fontFamily: "IRANSans",
-            letterSpacing: 0,
-          }}
-        >
+            fontFamily: 'IRANSans',
+            letterSpacing: 0
+          }}>
           فارسی
         </Button>
       </div>
     </div>
-  );
+  )
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -78,8 +75,7 @@ function ResponsiveDrawer() {
         edge="start"
         onClick={handleDrawerToggle}
         className={`${classes.menuButton} ${classes.menuIcon}`}
-        name="menuButton"
-      >
+        name="menuButton">
         <MenuIcon />
       </IconButton>
       <nav className={classes.drawer} aria-label="mailbox folders">
@@ -90,23 +86,21 @@ function ResponsiveDrawer() {
             open={mobileOpen}
             onClose={handleDrawerToggle}
             classes={{
-              paper: classes.drawerPaper,
+              paper: classes.drawerPaper
             }}
             ModalProps={{
-              keepMounted: true,
-            }}
-          >
+              keepMounted: true
+            }}>
             {drawer}
           </Drawer>
         </Hidden>
         <Hidden xsDown implementation="css">
           <Drawer
             classes={{
-              paper: classes.drawerPaper,
+              paper: classes.drawerPaper
             }}
             variant="permanent"
-            open
-          >
+            open>
             {drawer}
           </Drawer>
         </Hidden>
@@ -120,11 +114,11 @@ function ResponsiveDrawer() {
         }}
       ></Fade> */}
     </div>
-  );
+  )
 }
 
 ResponsiveDrawer.propTypes = {
-  window: PropTypes.func,
-};
+  window: PropTypes.func
+}
 
-export default ResponsiveDrawer;
+export default ResponsiveDrawer

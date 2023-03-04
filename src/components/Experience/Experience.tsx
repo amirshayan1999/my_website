@@ -1,20 +1,20 @@
-import Typography from "@material-ui/core/Typography";
-import ExperienceIcon from "@material-ui/icons/RadioButtonUnchecked";
-import useStyles from "./styles/Experience.styles";
-import React from "react";
+import Typography from '@material-ui/core/Typography'
+import ExperienceIcon from '@material-ui/icons/RadioButtonUnchecked'
+import useStyles from './styles/Experience.styles'
+import React from 'react'
 interface ExperienceProps {
-  year: number;
-  jobTitle: string;
-  company: string;
-  desc: string;
+  year: string
+  jobTitle: string
+  company: string
+  desc: string
 }
 const Experience: React.FC<ExperienceProps> = ({
   year,
   jobTitle,
   company,
-  desc,
+  desc
 }) => {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
     <div className={classes.root}>
       <div className={classes.yearContainer}>
@@ -33,6 +33,6 @@ const Experience: React.FC<ExperienceProps> = ({
         </Typography>
       </div>
     </div>
-  );
-};
-export default Experience;
+  )
+}
+export default Experience

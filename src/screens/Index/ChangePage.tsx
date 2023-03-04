@@ -1,24 +1,24 @@
-import About from "../About/About";
-import Contact from "../Contact/Contact";
-import Home from "../Home/Home";
-import Portfolios from "../Portfolios/Portfolios";
-import Resume from "../Resume/Resume";
+import About from '../About/About'
+import Contact from '../Contact/Contact'
+import Home from '../Home/Home'
+import Portfolios from '../Portfolios/Portfolios'
+import Resume from '../Resume/Resume'
 
 const ChangePage = (page: number) => {
   switch (page) {
     case 0:
-      return <Home />;
+      return <Home />
     case 1:
-      return <About />;
+      return <About />
     case 2:
-      return <Resume />;
+      return <Resume />
     case 3:
-      return <Portfolios />;
+      return <Portfolios />
     case 4:
-      return <Contact />;
+      return <Contact />
     default:
-      return <Home />;
+      return <Home />
   }
-};
+}
 
-export default ChangePage;
+export default ChangePage

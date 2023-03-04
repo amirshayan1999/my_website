@@ -1,25 +1,25 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
-    flexDirection: "column",
+    display: 'flex',
+    flexDirection: 'column',
     // width: "100%",
     flex: 1,
-    height: "100vh",
+    height: '100vh'
   },
   experienceContainer: {
     paddingLeft: 40,
     paddingBottom: 60,
-    [theme.breakpoints.down("sm")]: {
-      paddingLeft: 15,
-    },
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: 15
+    }
   },
   icon: {
-    fontSize: "2.4rem",
+    fontSize: '2.4rem'
   },
   experienceTitle: {
-    marginLeft: 15,
-  },
-}));
-export default useStyles;
+    marginLeft: 15
+  }
+}))
+export default useStyles

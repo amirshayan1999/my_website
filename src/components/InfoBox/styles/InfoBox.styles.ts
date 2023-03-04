@@ -1,40 +1,40 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: "0 20px",
-    display: "flex",
+    padding: '0 20px',
+    display: 'flex'
   },
   service: {
-    width: "100%",
+    width: '100%',
     height: 120,
     padding: 20,
     margin: 10,
-    backgroundColor: "#0f0f24",
-    border: "1px solid #37374e",
-    borderTop: "8px solid #37374e",
-    display: "flex",
-    alignItems: "center",
-    transition: "300ms",
-    "&:hover": {
-      borderTop: "8px solid rgba(229,39,100,1)",
-    },
+    backgroundColor: '#0f0f24',
+    border: '1px solid #37374e',
+    borderTop: '8px solid #37374e',
+    display: 'flex',
+    alignItems: 'center',
+    transition: '300ms',
+    '&:hover': {
+      borderTop: '8px solid rgba(229,39,100,1)'
+    }
   },
   infoContainer: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-around",
-    alignItems: "flex-start",
-    marginLeft: 20,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: 'flex-start',
+    marginLeft: 20
   },
   title: {
     paddingBottom: 10,
-    position: "relative",
+    position: 'relative'
   },
   desc: {
-    [theme.breakpoints.down("sm")]: {
-      fontSize: 15,
-    },
-  },
-}));
-export default useStyles;
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 15
+    }
+  }
+}))
+export default useStyles

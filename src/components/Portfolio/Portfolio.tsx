@@ -1,13 +1,13 @@
-import React from "react";
-import Typography from "@material-ui/core/Typography";
-import useStyles from "./styles/Portfolio.styles";
+import React from 'react'
+import Typography from '@material-ui/core/Typography'
+import useStyles from './styles/Portfolio.styles'
 interface PortfolioProps {
-  imgSrc: string;
-  title: string;
-  language: string;
+  imgSrc: string
+  title: string
+  language: string
 }
 const Portfolio: React.FC<PortfolioProps> = ({ imgSrc, title, language }) => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <div className={classes.root}>
@@ -23,7 +23,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ imgSrc, title, language }) => {
         <Typography variant="body1">{language}</Typography>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Portfolio;
+export default Portfolio

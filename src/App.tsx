@@ -1,21 +1,21 @@
-import theme from "./themes/theme";
+import theme from './themes/theme'
 import {
   ThemeProvider,
   StylesProvider,
-  jssPreset,
-} from "@material-ui/core/styles";
-import { CssBaseline } from "@material-ui/core";
-import { create } from "jss";
-import rtl from "jss-rtl";
-import { getDirection } from "./localization/index";
-import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer } from "react-toastify";
-import Routes from "./routes";
+  jssPreset
+} from '@material-ui/core/styles'
+import { CssBaseline } from '@material-ui/core'
+import { create } from 'jss'
+import rtl from 'jss-rtl'
+import { getDirection } from './localization/index'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
+import Routes from './routes'
 
-const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
+const jss = create({ plugins: [...jssPreset().plugins, rtl()] })
 
 const App = () => {
-  return getDirection() === "ltr" ? (
+  return getDirection() === 'ltr' ? (
     <ThemeProvider theme={theme}>
       <StylesProvider>
         <CssBaseline />
@@ -53,7 +53,7 @@ const App = () => {
         <Routes />
       </StylesProvider>
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default App;
+export default App
