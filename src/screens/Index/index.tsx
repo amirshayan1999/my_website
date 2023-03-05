@@ -8,11 +8,10 @@ import List from '@material-ui/core/List'
 import MenuIcon from '@material-ui/icons/Menu'
 import profilePhoto from '../../assets/images/profile.jpg'
 import { changeLang, lang } from '../../localization'
-import { Button } from '@material-ui/core'
+import { Button, Hidden } from '@material-ui/core'
 import LanguageIcon from '@material-ui/icons/Language'
 import MenuItem from '../../components/MenuItem/MenuItem'
 import useStyles from './styles/index.styles'
-import { Hidden } from '@mui/material'
 
 function ResponsiveDrawer() {
   const classes = useStyles()
