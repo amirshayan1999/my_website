@@ -4,7 +4,7 @@ import { getDirection } from '../../../localization'
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    height: 120,
+    // height: 120,
     display: 'flex',
     justifyContent: 'flex-start',
     position: 'relative',
