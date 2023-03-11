@@ -21,9 +21,8 @@ const useStyles = makeStyles((theme) => ({
       height: 5,
       backgroundColor: '#e52764',
       position: 'absolute',
-      top: 'auto',
       left: 0,
-      bottom: 0,
+      bottom: -10,
       margin: '30px 0 0 50px',
       borderRadius: 5
     },
@@ -34,9 +33,8 @@ const useStyles = makeStyles((theme) => ({
         height: '5px',
         backgroundColor: '#e52764',
         position: 'absolute',
-        top: 'auto',
         left: 0,
-        bottom: 0,
+        bottom: -10,
         margin: '30px 0 0 35px',
         borderRadius: 5
       }

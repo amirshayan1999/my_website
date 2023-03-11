@@ -48,7 +48,7 @@ const info = {
   jobFirstCompany: 'قلم چی',
   jobFirstDesc:
     'طراحی یک برنامه برای کنترل و دید بهتر به دانش آموزان برای مدیریت انها',
-  jobSecondYear: '1400 - حال',
+  jobSecondYear: '1400 - 1401',
   jobSecondTitle: 'توسعه دهنده سمت کاربر',
   jobSecondCompany: 'شرکت عدل آفرینان ماندگار',
   jobSecondDesc:

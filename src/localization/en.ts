@@ -48,7 +48,7 @@ const info = {
   jobFirstCompany: 'Ghalamchi',
   jobFirstDesc:
     'Program an app for contorl and better view of student for managing them',
-  jobSecondYear: '2021 - now',
+  jobSecondYear: '2021 - 2022',
   jobSecondTitle: 'Frontend Developer',
   jobSecondCompany: 'Adl Afarinan Mandegar co.',
   jobSecondDesc:

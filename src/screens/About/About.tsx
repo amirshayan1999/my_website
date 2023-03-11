@@ -40,7 +40,7 @@ function About() {
             {translate.name}
           </Typography>
           <Typography variant="body1" className={classes.info}>
-            <b className={classes.bold}>{translate.age}</b>: 20{' '}
+            <b className={classes.bold}>{translate.age}</b>: 22{' '}
             {translate.years}
           </Typography>
           <Typography variant="body1" className={classes.info}>

@@ -5,12 +5,18 @@ interface PortfolioProps {
   imgSrc: string
   title: string
   language: string
+  onClick?: () => void
 }
-const Portfolio: React.FC<PortfolioProps> = ({ imgSrc, title, language }) => {
+const Portfolio: React.FC<PortfolioProps> = ({
+  imgSrc,
+  title,
+  language,
+  onClick
+}) => {
   const classes = useStyles()
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} onClick={onClick ? onClick : () => {}}>
       <div className={classes.container}>
         <div className={classes.portfolioPic}>
           <img src={imgSrc} className={classes.image} alt="portfolio" />
