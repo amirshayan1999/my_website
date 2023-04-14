@@ -16,12 +16,11 @@ const InfoBox: React.FC<InfoBoxProps> = ({ icon, title, desc }) => {
           <Typography variant="h6" className={classes.title}>
             {title}
           </Typography>
-          <Typography variant="body1" className={classes.desc}>
-            {desc[0]}
-          </Typography>
-          <Typography variant="body1" className={classes.desc}>
-            {desc[1]}
-          </Typography>
+          {desc.map((item) => (
+            <Typography variant="body1" className={classes.desc} key={item}>
+              {item}
+            </Typography>
+          ))}
         </div>
       </div>
     </div>

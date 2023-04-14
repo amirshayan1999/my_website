@@ -3,6 +3,7 @@ import fa_ir from './fa'
 
 type langType = 'fa' | 'en'
 type directionType = 'rtl' | 'ltr'
+
 const lang = (
   localStorage.getItem('lang') ? localStorage.getItem('lang') : 'en'
 ) as langType

@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative'
   },
   desc: {
+    direction: 'ltr',
     [theme.breakpoints.down('sm')]: {
       fontSize: 15
     }

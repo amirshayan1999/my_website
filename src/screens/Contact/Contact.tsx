@@ -115,7 +115,7 @@ function Contact() {
         <Grid item xs={12} lg={6} className={classes.infoContainer}>
           <InfoBox
             title={translate.phone}
-            desc={['(+98)9115647432', '(+98)9116074349']}
+            desc={['(98)9115647432', '(98)9397995929']}
             icon={<PhoneIcon className={classes.icon} />}
           />
           <InfoBox
