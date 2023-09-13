@@ -6,6 +6,7 @@ import Portfolio from '../../components/Portfolio/Portfolio'
 import photo from '../../assets/images/portfolio.png'
 import dongyab from '../../assets/images/dongyab.png'
 import useStyles from './styles/Portfolios.styles'
+import nodemon from '../../assets/images/nodemon.png'
 const Portfolios = () => {
   const classes = useStyles()
   const translate = getTranslate()
@@ -26,9 +27,10 @@ const Portfolios = () => {
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
             <Portfolio
-              imgSrc={photo}
-              title="portfolio sample"
-              language="react JS"
+              imgSrc={nodemon}
+              title="Nodemon"
+              language="Next js"
+              onClick={() => window.open('https://nodemon.us/', '_blank')}
             />
           </Grid>
           <Grid item xs={12} md={6} lg={4}>

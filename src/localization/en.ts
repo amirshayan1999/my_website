@@ -7,8 +7,7 @@ const info = {
   contact: 'CONTACT',
   hi1: 'Hi, I am ',
   hi2: '',
-  homeDesc:
-    'I am a frontend web developer and getting ready for being a fullstack developer as soon as possible',
+  homeDesc: 'I am a fullstack developer',
   aboutMe: 'ABOUT ME',
   fullName: 'Full Name',
   age: 'Age',
@@ -26,7 +25,7 @@ const info = {
   webDevelopment: 'Web Development',
   mobileApplication: 'Mobile Application',
   designDesc:
-    'Implementing user interfaces with React, React Router, and Material UI, CSS, JSS, and Bootstrap for styling. Creating responsive websites',
+    'Implementing user interfaces with React, React Router, and Material UI, CSS, JSS, Tailwind, Styled Component and Bootstrap for styling. Creating responsive websites',
   developDesc:
     "I like Nodejs and enjoing coding with that and building a web site with it , it's fun ;)",
   mobileAppDesc:
@@ -37,6 +36,10 @@ const info = {
   js: 'JavaScript',
   reactNative: 'React Native',
   reactJS: 'React js',
+  nextJs: 'Nextjs',
+  tailwind: 'Tailwind',
+  apollo: 'Apollo',
+  graphql: 'Graphql',
   bootstrap: 'Bootstrap',
   materialUI: 'MaterialUI',
   nodeJs: 'Node JS',
@@ -53,6 +56,10 @@ const info = {
   jobSecondCompany: 'Adl Afarinan Mandegar co.',
   jobSecondDesc:
     'Frontend developer at Adl Afarinan Mandegar , and some design work ;)',
+  jobThirdYear: '2022 - 2023',
+  jobThirdTitle: 'FullStack Developer',
+  jobThirdCompany: 'Nodemon',
+  jobThirdDesc: 'FullStack developer at Nodemon and some Devops tasks :)',
   educationalQualification: 'Educational Qualification',
   firstDegreeYear: '2012 - 2018',
   firstDegree: 'High School Diploma (Theoretical and Mathematical Physics)',

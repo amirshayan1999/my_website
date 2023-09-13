@@ -18,12 +18,16 @@ const Resume = () => {
           <Skill title={translate.js} val={78} />
           <Skill title={translate.reactJS} val={83} />
           <Skill title={translate.materialUI} val={68} />
+          <Skill title={translate.nextJs} val={78} />
+          <Skill title={translate.apollo} val={80} />
         </Grid>
         <Grid item xs={12} lg={6}>
           <Skill title={translate.css3} val={80} />
           <Skill title={translate.reactNative} val={70} />
           <Skill title={translate.bootstrap} val={39} />
-          <Skill title={translate.nodeJs} val={51} />
+          <Skill title={translate.nodeJs} val={70} />
+          <Skill title={translate.tailwind} val={81} />
+          <Skill title={translate.graphql} val={81} />
         </Grid>
       </Grid>
       <Title text={translate.resume} />
@@ -43,6 +47,12 @@ const Resume = () => {
           company={translate.jobSecondCompany}
           jobTitle={translate.jobSecondTitle}
           desc={translate.jobSecondDesc}
+        />
+        <Experience
+          year={translate.jobThirdYear}
+          company={translate.jobThirdCompany}
+          jobTitle={translate.jobThirdTitle}
+          desc={translate.jobThirdDesc}
         />
       </Grid>
       <Grid container direction="row" className={classes.experienceContainer}>
