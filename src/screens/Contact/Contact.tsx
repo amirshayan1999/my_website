@@ -45,12 +45,21 @@ function Contact() {
               })
               args.resetForm()
             }}>
-            {({ values, handleBlur, isSubmitting, handleChange }) => (
+            {({
+              values,
+              handleBlur,
+              isSubmitting,
+              handleChange,
+              errors,
+              touched
+            }) => (
               <Form>
                 <TextField
                   color="primary"
                   className={classes.input}
                   name="name"
+                  aria-label="name"
+                  aria-valuetext={values.name}
                   value={values.name}
                   onBlur={handleBlur}
                   disabled={isSubmitting}
@@ -59,9 +68,13 @@ function Contact() {
                   fullWidth
                   label={translate.enterYourName}
                   variant="outlined"
+                  error={touched.name && Boolean(errors.name)}
+                  helperText={touched.name && errors.name}
                 />
                 <TextField
                   className={classes.input}
+                  aria-label="email"
+                  aria-valuetext={values.email}
                   required
                   fullWidth
                   label={translate.enterYourEmail}
@@ -72,9 +85,13 @@ function Contact() {
                   disabled={isSubmitting}
                   onChange={handleChange}
                   type="email"
+                  error={touched.email && Boolean(errors.email)}
+                  helperText={touched.email && errors.email}
                 />
                 <TextField
                   className={classes.input}
+                  aria-label="subject"
+                  aria-valuetext={values.subject}
                   required
                   fullWidth
                   label={translate.enterYourSubject}
@@ -84,10 +101,14 @@ function Contact() {
                   onBlur={handleBlur}
                   disabled={isSubmitting}
                   onChange={handleChange}
+                  error={touched.subject && Boolean(errors.subject)}
+                  helperText={touched.subject && errors.subject}
                 />
                 <TextField
                   className={classes.input}
                   label={translate.enterYourMessage}
+                  aria-label="message"
+                  aria-valuetext={values.message}
                   multiline
                   fullWidth
                   minRows={5}
@@ -97,10 +118,12 @@ function Contact() {
                   onBlur={handleBlur}
                   disabled={isSubmitting}
                   onChange={handleChange}
+                  error={touched.message && Boolean(errors.message)}
+                  helperText={touched.message && errors.message}
                 />
-
                 <Button
                   variant="outlined"
+                  aria-label="send-message"
                   className={classes.sendBtn}
                   fullWidth
                   name="send-message"
@@ -115,12 +138,12 @@ function Contact() {
         <Grid item xs={12} lg={6} className={classes.infoContainer}>
           <InfoBox
             title={translate.phone}
-            desc={['(98)9115647432', '(98)9397995929']}
+            desc={translate.phoneNumbers}
             icon={<PhoneIcon className={classes.icon} />}
           />
           <InfoBox
             title={translate.email}
-            desc={[translate.emailAddress]}
+            desc={translate.emailAddress}
             icon={<EmailIcon className={classes.icon} />}
           />
           <InfoBox

@@ -15,43 +15,32 @@ import Routes from './routes'
 const jss = create({ plugins: [...jssPreset().plugins, rtl()] })
 
 const App = () => {
-  return getDirection() === 'ltr' ? (
+  return (
     <ThemeProvider theme={theme}>
-      <StylesProvider>
-        <CssBaseline />
-        <ToastContainer
-          position="bottom-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="colored"
-        />
-        <Routes />
-      </StylesProvider>
-    </ThemeProvider>
-  ) : (
-    <ThemeProvider theme={theme}>
-      <StylesProvider jss={jss}>
-        <CssBaseline />
-        <ToastContainer
-          position="bottom-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="colored"
-        />
-        <Routes />
-      </StylesProvider>
+      {getDirection() === 'ltr' ? (
+        <StylesProvider>
+          <CssBaseline />
+          <Routes />
+        </StylesProvider>
+      ) : (
+        <StylesProvider jss={jss}>
+          <CssBaseline />
+
+          <Routes />
+        </StylesProvider>
+      )}
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </ThemeProvider>
   )
 }

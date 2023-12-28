@@ -7,8 +7,7 @@ const info = {
   contact: 'ارتباط با من',
   hi1: 'سلام من ',
   hi2: ' هستم',
-  homeDesc:
-    'برنامه نویس سمت کاربر هستم و دارم اماده می شم هر چه سریع تر یه فول استک بشم :)',
+  homeDesc: 'من یک توسعه دهنده ی فول استک هستم',
   aboutMe: 'معرفی',
   fullName: 'نام کامل',
   age: 'سال',
@@ -79,8 +78,9 @@ const info = {
   email: 'ایمیل',
   address: 'آدرس',
   send: 'ارسال پیام',
-  emailAddress: 'arsham.ramezani@gmail.com',
+  emailAddress: ['arsham.ramezani@gmail.com'],
   addressDesc: 'ایران, تهران',
-  messageSent: 'پیام شما ارسال شد'
+  messageSent: 'پیام شما ارسال شد',
+  phoneNumbers: ['۹۱۱۵۶۴۷۴۳۲(۹۸)', '۹۳۵۷۹۹۵۹۲۹(۹۸)']
 }
 export default info

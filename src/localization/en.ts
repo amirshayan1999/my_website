@@ -79,8 +79,9 @@ const info = {
   email: 'Email',
   address: 'Address',
   send: 'Send Massage',
-  emailAddress: 'arsham.ramezani@gmail.com',
+  emailAddress: ['arsham.ramezani@gmail.com'],
   addressDesc: 'Iran, Tehran',
-  messageSent: 'Your message has been sent successfully'
+  messageSent: 'Your message has been sent successfully',
+  phoneNumbers: ['(98)9115647432', '(98)9397995929']
 }
 export default info
