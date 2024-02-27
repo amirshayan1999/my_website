@@ -23,21 +23,15 @@ const Home = () => {
       </Typography>
       <div className={classes.btnContainer}>
         <a
-          href="https://www.linkedin.com/in/arsham-ramzani-0905a8194/"
+          href="https://github.com/amirshayan1999"
           target="_blank"
           rel="noreferrer">
-          <IconButton className={classes.iconBTN} name="LinkedInButton">
-            <LinkedInIcon className={classes.Icon} />
-          </IconButton>
-        </a>
-
-        <a href="https://github.com/arsham79" target="_blank" rel="noreferrer">
           <IconButton className={classes.iconBTN} name="GitHubButton">
             <GitHubIcon className={classes.Icon} />
           </IconButton>
         </a>
 
-        <a href="https://t.me/arsham79" target="_blank" rel="noreferrer">
+        <a href="https://t.me/domigenic" target="_blank" rel="noreferrer">
           <IconButton className={classes.iconBTN} name="TelegramButton">
             <TelegramIcon className={classes.Icon} />
           </IconButton>

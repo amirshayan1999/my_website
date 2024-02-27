@@ -20,9 +20,7 @@ const Portfolios = () => {
               imgSrc={dongyab}
               title="Dong Yab"
               language="react JS"
-              onClick={() =>
-                window.open('http://dongyab.arsham79.ir/', '_blank')
-              }
+              onClick={() => window.open('http://dongyab.ir/', '_blank')}
             />
           </Grid>
           <Grid item xs={12} md={6} lg={4}>

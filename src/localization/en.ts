@@ -1,5 +1,5 @@
 const info = {
-  name: 'Arsham Ramzani',
+  name: 'AmirShayan Mobaraki',
   home: 'HOME',
   about: 'ABOUT',
   resume: 'RESUME',
@@ -79,9 +79,9 @@ const info = {
   email: 'Email',
   address: 'Address',
   send: 'Send Massage',
-  emailAddress: ['arsham.ramezani@gmail.com'],
+  emailAddress: ['AmirShayan1999@gmail.com'],
   addressDesc: 'Iran, Tehran',
   messageSent: 'Your message has been sent successfully',
-  phoneNumbers: ['(98)9115647432', '(98)9397995929']
+  phoneNumbers: ['(98)9127928451', '(98)9213988212']
 }
 export default info

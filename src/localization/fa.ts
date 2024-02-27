@@ -1,5 +1,5 @@
 const info = {
-  name: 'آرشام رمضانی',
+  name: 'امیرشایان مبارکی',
   home: 'خانه',
   about: 'درباره من',
   resume: 'رزومه',
@@ -78,9 +78,9 @@ const info = {
   email: 'ایمیل',
   address: 'آدرس',
   send: 'ارسال پیام',
-  emailAddress: ['arsham.ramezani@gmail.com'],
+  emailAddress: ['amirshayan1999@gmail.com'],
   addressDesc: 'ایران, تهران',
   messageSent: 'پیام شما ارسال شد',
-  phoneNumbers: ['۹۱۱۵۶۴۷۴۳۲(۹۸)', '۹۳۵۷۹۹۵۹۲۹(۹۸)']
+  phoneNumbers: ['۹۱۲۷۹۲۸۴۵۱(۹۸)', '۹۲۱۳۹۸۸۲۱۲(۹۸)']
 }
 export default info
